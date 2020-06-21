@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "hacked";
+  src: url(fonts/hacked.ttf) format("truetype");
+}
 body {
   background-color: #000000;
   margin: 0;
@@ -8,10 +12,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: "hacked", sans-serif;
+  font-size: 80px;
+}
 .branding {
   background-color: #000000;
   color: #ffffff;
 }
+
+.navbar {
+  background-color: #000000;
+}
+.nav-head {
+  display: inline-block;
+}
+
+.nav-head-item {
+  display: inline-block;
+  padding-right: 60px;
+  font-size: 20px;
+
+}
+.nav-head-item .nav-head-link {
+  background-color: #14213D;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  color: #FCA311;
+}
+
+
 
 
 code {

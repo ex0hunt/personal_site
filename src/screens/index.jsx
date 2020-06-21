@@ -27,27 +27,27 @@ function IndexNavBar(props) {
     let currentPath = window.location.pathname;
 
     return (
-        <Navbar bg={'light'} variant={'light'} expand={"sm"}>
-            <Nav.Item style={SelectedBackgroundStyle(currentPath, "/whoami/")}>
-                <Link to={"/whoami/"}
+        <ul className={'nav-head'}>
+            <li className={'nav-head-item'} style={SelectedBackgroundStyle(currentPath, "/whoami/")}>
+                <Link className={'nav-head-link'} to={"/whoami/"}
                       style={SelectedFontStyle(currentPath, "/whoami/")}>About me</Link>
 
-            </Nav.Item>
-            <Nav.Item style={SelectedBackgroundStyle(currentPath, "/blog/")}>
-                <Link to={"/blog/"}
+            </li>
+            <li className={'nav-head-item'}style={SelectedBackgroundStyle(currentPath, "/blog/")}>
+                <Link className={'nav-head-link'} to={"/blog/"}
                       style={SelectedFontStyle(currentPath, "/blog/")}>Blog</Link>
 
-            </Nav.Item>
-            <Nav.Item style={SelectedBackgroundStyle(currentPath, "/ents/")}>
-                <Link to={"/ents/"}
+            </li>
+            <li className={'nav-head-item'} style={SelectedBackgroundStyle(currentPath, "/ents/")}>
+                <Link className={'nav-head-link'} to={"/ents/"}
                       style={SelectedFontStyle(currentPath, "/ents/")}>Entertainments</Link>
-            </Nav.Item>
-            <Nav.Item style={SelectedBackgroundStyle(currentPath, "/services/")}>
-                <Link to={"/services/"}
+            </li>
+            <li className={'nav-head-item'} style={SelectedBackgroundStyle(currentPath, "/services/")}>
+                <Link className={'nav-head-link'} to={"/services/"}
                       style={SelectedFontStyle(currentPath, "/services/")}>My Services</Link>
 
-            </Nav.Item>
-        </Navbar>
+            </li>
+        </ul>
     )
 }
 
@@ -60,14 +60,12 @@ export default class IndexScreen extends React.Component {
         return (
             <div className="container-fluid">
                 <Row className="show-grid">
-                 <div className={"branding"}>
-                     <Col md={12} className="text-center">
-                        <h1 className="text-center">Ex0</h1>
-                         </Col>
-                </div>
+                 <Col md={12} className="text-center">
+                    <h1 className="text-center branding">Ex0</h1>
+                     </Col>
                 </Row>
                 <Row className="show-grid">
-                    <Col md={12}>
+                    <Col md={12}  className="text-center">
                         <IndexNavBar/>
                     </Col>
                 </Row>
