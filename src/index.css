@@ -21,24 +21,42 @@ h1 {
   color: #ffffff;
 }
 
-.navbar {
-  background-color: #000000;
-}
-.nav-head {
-  display: inline-block;
-}
-
 .nav-head-item {
   display: inline-block;
-  padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 20px;
 
 }
+
+.nav-head{
+  padding-top: 10px;
+  margin-bottom: 50px;
+  background-color: #14213D;
+}
+
 .nav-head-item .nav-head-link {
   background-color: #14213D;
   padding: 10px 15px 10px 15px;
   border-radius: 20px;
   color: #FCA311;
+}
+.nav-foo{
+  padding: 0px 0px 0px 0px;
+  margin-right: 0px ;
+}
+
+.nav-foo-item{
+  display: inline-block;
+}
+
+.nav-foo-item .nav-foo-link {
+  padding: 10px 35px 10px 35px;
+  margin-left: 10px ;
+  background-color: #E5E5E5;
+  border-radius: 20px;
+  color: #14213D;
+
 }
 
 
