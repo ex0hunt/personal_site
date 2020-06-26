@@ -8,6 +8,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  color: #E5E5E5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +27,16 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 20px;
+  font-weight: bold;
 
+}
+
+.custom-navbar{
+  margin-bottom: 10px;
+}
+
+.selected {
+  background-color: #FCA311;
 }
 
 .nav-head{
@@ -34,16 +44,35 @@ h1 {
   margin-bottom: 50px;
   background-color: #14213D;
 }
-
 .nav-head-item .nav-head-link {
-  background-color: #14213D;
   padding: 10px 15px 10px 15px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #FCA311;
 }
+
+.nav-head-item .nav-head-link.selected{
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+
+
+.warning {
+  text-align: center;
+  color: #FCA311;
+}
+
+
 .nav-foo{
-  padding: 0px 0px 0px 0px;
-  margin-right: 0px ;
+  position: absolute;
+  left: -25px;
+  bottom: -150px;
+  width: 100%;
+  text-align: center;
 }
 
 .nav-foo-item{
@@ -54,7 +83,7 @@ h1 {
   padding: 10px 35px 10px 35px;
   margin-left: 10px ;
   background-color: #E5E5E5;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #14213D;
 
 }
