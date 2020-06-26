@@ -26,7 +26,7 @@ export default class IndexScreen extends React.Component {
 
     componentDidMount() {
         // load default page
-        if (!this.props.location.pathname){
+        if (!this.props.location.pathname || this.props.location.pathname === '/'){
             this.props.history.push("/whoami/");
         }
     }

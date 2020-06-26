@@ -1,6 +1,6 @@
 @font-face {
   font-family: "hacked";
-  src: url(fonts/hacked.ttf) format("truetype");
+  src: url(../public/fonts/hacked.ttf) format("truetype");
 }
 body {
   background-color: #000000;
@@ -87,8 +87,6 @@ h1 {
   color: #14213D;
 
 }
-
-
 
 
 code {
