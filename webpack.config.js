@@ -24,6 +24,7 @@ module.exports = (env, argv) => ({
         modules: [
             "node_modules",
             path.resolve(__dirname, "src/"),
+            path.resolve(__dirname, "src/fonts/"),
             path.resolve(__dirname, "public/"),
         ]
     },

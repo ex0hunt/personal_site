@@ -7,14 +7,6 @@ import BlogScreen from "./blog.jsx";
 import EntsScreen from "./ents.jsx";
 import ServicesScreen from "./services.jsx";
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {faTwitter} from '@fortawesome/free-brands-svg-icons/faTwitter'
-import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons/faLinkedin'
-
-library.add(faTwitter, faGithub, faLinkedin);
-
 
 export default class IndexScreen extends React.Component {
     constructor(props) {
@@ -26,7 +18,7 @@ export default class IndexScreen extends React.Component {
 
     componentDidMount() {
         // load default page
-        if (!this.props.location.pathname || this.props.location.pathname === '/'){
+        if (!this.props.location.pathname || this.props.location.pathname === '/') {
             this.props.history.push("/whoami/");
         }
     }
@@ -74,32 +66,9 @@ export default class IndexScreen extends React.Component {
         )
     }
 
-    fooBar() {
-        return (
-            <Row className="show-grid">
-                <Col md={12} className="text-center">
-                    <ul className={'nav-foo'}>
-                        <li className={'nav-foo-item'}>
-                            <a href="https://github.com/ex0hunt" className={'nav-foo-link'}
-                               target="_blank"><FontAwesomeIcon icon={["fab", "github"]}/> GitHub</a>
-                        </li>
-                        <li className={'nav-foo-item'}>
-                            <a href="https://www.linkedin.com/in/dmitry-katargin-44a36250" className={'nav-foo-link'}
-                               target="_blank"><FontAwesomeIcon icon={["fab", "linkedin"]}/> LinkedIn</a>
-                        </li>
-                        <li className={'nav-foo-item'}>
-                            <a href="https://twitter.com/ex0hunt" className={'nav-foo-link'}
-                               target="_blank"><FontAwesomeIcon icon={["fab", "twitter"]}/> Twitter</a>
-                        </li>
-                    </ul>
-                </Col>
-            </Row>
-        )
-    }
 
     render() {
         const navBar = this.navBar()
-        const footer = this.fooBar()
         return (
             <div className="container-fluid">
                 {navBar}
@@ -115,7 +84,6 @@ export default class IndexScreen extends React.Component {
                         </section>
                     </Col>
                 </Row>
-                {footer}
             </div>
         )
     }
