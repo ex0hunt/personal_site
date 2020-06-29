@@ -82,7 +82,7 @@ export default class WhoAmIScreen extends React.Component {
                             Technical University.
                         </p>
                         <p>
-                            🎧 I like listen some Russian technical podcasts for grow up my skills. Some of them:
+                            🎧 I like listen some russian technical podcasts for grow up my skills. Some of them:
                             <ul id="skill-list">
                                 <li><b><a
                                     href={"https://podcasts.google.com/feed/aHR0cHM6Ly9iZWFyZHljYXN0LmxpYnN5bi5jb20vcnNz"}>BeardyCast</a></b> -
