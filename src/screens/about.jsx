@@ -98,7 +98,7 @@ export default class WhoAmIScreen extends React.Component {
                                 </li>
                                 <li><b><a
                                     href={"https://podcasts.google.com/feed/aHR0cHM6Ly9wY3IuYXBwbGUuY29tL2lkMTEzMjMzMTA4MA"}>The
-                                    Big Beard Theory</a></b> - science talks (all about space and Universe!)
+                                    Big Beard Theory</a></b> - scientific talks (all about Space and Universe!)
                                 </li>
                                 <li><b><a
                                     href={"https://podcasts.google.com/feed/aHR0cHM6Ly96YXZ0cmFjYXN0LnJ1L2ZlZWQvcG9kY2FzdA"}>ZavtraCast</a></b> -
