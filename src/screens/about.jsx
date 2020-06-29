@@ -57,17 +57,14 @@ export default class WhoAmIScreen extends React.Component {
             <Fragment>
                 <Row>
                     <Col md={{offset: 2, span: 2}}>
-                        <img className="rounded img-fluid" src="/public/media/avatar.jpeg"/>
+                        <img className="rounded img-fluid" src="https://exo.icu/public/media/avatar.jpeg"/>
                     </Col>
                     <Col md={6}>
-                        <h3>Introduction</h3>
                         <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span> years old
-                            russian software developer with
-                            science and python background.</code></p>
-                        <p>I love to spend my free time renovating my home, talk with interesting people, searching
-                            something new in development.
-                            I love scifi and cyberpunk.</p>
-                        <h3>My Skills</h3>
+                            russian software developer at <a href={"https://my.games"} target={"_blank"}>MY.GAMES team (Mail.ru Group)</a>.
+                            I love make some web stuff (like this page) and play video games 🙂</code></p>
+
+                        <h5>My Skills</h5>
                         <ul id="skill-list">
                             <li>Analytical skills</li>
                             <li>Backend development (django, drf, golang)</li>
@@ -77,20 +74,45 @@ export default class WhoAmIScreen extends React.Component {
                             <li>Linux-based system administrator</li>
                             <li>Teamwork</li>
                         </ul>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col md={{offset: 4, span: 6}}>
-                        <h3>More...</h3>
+                        <br/><br/>
+                        <h4>More...</h4>
                         <p>
-                            I have studied information security but have always been interested in software development.
-                            And, I think, found "holy grail" - writing safe code, without vulnerabilities :)
-                            I'm highly energetic and motivated person and I love to work as a member of a team. I
-                            especially
-                            enjoy working with changing projects and taking them forward with rapid pace but high
-                            precision.
-                            I am talkative and sociable but also can concentrating on detailed work like programming.
+                            ‍💻 Before now , I worked at small start-up teams as <code>QA Engineer -> Python developer</code> and graduated from Taganrog State
+                            Radio
+                            Technical University.
+                        </p>
+                        <p>
+                            🎧 I like listen some Russian technical podcasts for grow up my skills. Some of them:
+                            <ul id="skill-list">
+                                <li><b><a
+                                    href={"https://podcasts.google.com/feed/aHR0cHM6Ly9iZWFyZHljYXN0LmxpYnN5bi5jb20vcnNz"}>BeardyCast</a></b> -
+                                    IT, media, gadgets
+                                </li>
+                                <li><b><a
+                                    href={"https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RzdGVyLmZtL3Jzcy54bWw_cGlkPTU3NjY1"}>EveryPod</a></b> -
+                                    tech and video games talks
+                                </li>
+                                <li><b><a
+                                    href={"https://podcasts.google.com/feed/aHR0cHM6Ly9yYWRpby10LmNvbS9wb2RjYXN0LWFyY2hpdmVzLnJzcw"}>Radio-T</a></b> -
+                                    IT, development
+                                </li>
+                                <li><b><a
+                                    href={"https://podcasts.google.com/feed/aHR0cHM6Ly9wY3IuYXBwbGUuY29tL2lkMTEzMjMzMTA4MA"}>The
+                                    Big Beard Theory</a></b> - science talks (all about space and Universe!)
+                                </li>
+                                <li><b><a
+                                    href={"https://podcasts.google.com/feed/aHR0cHM6Ly96YXZ0cmFjYXN0LnJ1L2ZlZWQvcG9kY2FzdA"}>ZavtraCast</a></b> -
+                                    media, some news
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            🧪 Also love do some research or learn new technologies. Now I try to learn <code>Kotlin</code> language
+                            because I want to write something for my phone 😏
+                        </p>
+                        <p>
+                            🎮 I work in game industry and of course I love play some games on my PC and Nintendo Switch,
+                            like a Overwatch and Pokemon Sword
                         </p>
                     </Col>
                 </Row>
