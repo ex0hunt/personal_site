@@ -60,9 +60,9 @@ export default class WhoAmIScreen extends React.Component {
                         <img className="rounded img-fluid" src="https://exo.icu/public/media/avatar.jpeg"/>
                     </Col>
                     <Col md={6}>
-                        <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span> years old
+                        <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}-years-old</span>
                             russian software developer at <a href={"https://my.games"} target={"_blank"}>MY.GAMES team (Mail.ru Group)</a>.
-                            I love make some web stuff (like this page) and play video games 🙂</code></p>
+                            I enjoy making web stuff  (like this page) and playing video games 🙂</code></p>
 
                         <h5>My Skills</h5>
                         <ul id="skill-list">
@@ -77,12 +77,11 @@ export default class WhoAmIScreen extends React.Component {
                         <br/><br/>
                         <h4>More...</h4>
                         <p>
-                            ‍💻 Before now , I worked at small start-up teams as <code>QA Engineer -> Python developer</code> and graduated from Taganrog State
-                            Radio
-                            Technical University.
+                            ‍💻 Previously I worked at small start-up teams as <code>QA Engineer -> Python developer</code> and graduated from Taganrog State
+                            Radio Technical University.
                         </p>
                         <p>
-                            🎧 I like listen some russian technical podcasts for grow up my skills. Some of them:
+                            🎧 I listen technical podcasts for improving my professional skills. Some of them:
                             <ul id="skill-list">
                                 <li><b><a
                                     href={"https://podcasts.google.com/feed/aHR0cHM6Ly9iZWFyZHljYXN0LmxpYnN5bi5jb20vcnNz"}>BeardyCast</a></b> -
@@ -107,12 +106,11 @@ export default class WhoAmIScreen extends React.Component {
                             </ul>
                         </p>
                         <p>
-                            🧪 Also love do some research or learn new technologies. Now I try to learn <code>Kotlin</code> language
-                            because I want to write something for my phone 😏
+                            🧪 I enjoy doing research and studying new technologies. Now I’m trying to learn <code>Kotlin</code>
+                             to write something for my phone 😏
                         </p>
                         <p>
-                            🎮 I work in game industry and of course I love play some games on my PC and Nintendo Switch,
-                            like a Overwatch and Pokemon Sword
+                            🎮 I work in game industry and love playing games on my PC and Nintendo Switch, especially Overwatch and Pokemon Sword
                         </p>
                     </Col>
                 </Row>
