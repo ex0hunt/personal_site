@@ -19,8 +19,19 @@ export default class BlogScreen extends React.Component {
         this.setState({loading: false, data: data})
     }
 
+    fetchData(){
+        const qs = this.props.location.search
+        BlogFetcher(`/api/blog/rest/entities/${qs}`, 'GET', this.handleData)
+    }
+
     componentDidMount() {
-        BlogFetcher('/api/blog/rest/entities/', 'GET', this.handleData)
+        this.fetchData()
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.location.key !== this.props.location.key){
+            this.fetchData()
+        }
     }
 
     formatDateTime(timeString) {
@@ -45,11 +56,23 @@ export default class BlogScreen extends React.Component {
 
                 </React.Fragment>
             }
+            let tags = [];
+            for (let i = 0; i < item.tags.length; i++) {
+                tags.push(
+                    <div key={`entity_tag__${item.slug}_${i}`}>
+                        <Link to={`/blog/?tag=${item.tags[i]}`}>{item.tags[i]}</Link>
+                    </div>
+                )
+            }
+
             cards.push(<div key={item.slug} className="content-card content-background">
                 <div key={'card_title__' + item.slug} className="card-title"><Link
                     to={`/blog/post/${item.slug}/`}>{item.title}</Link></div>
                 <div key={'card_prev__' + item.slug} className="card-preview">{parse(item.preview)}</div>
                 <div key={'card_footer__' + item.slug} className="card-footer">
+                    <div key={'taglist__'+item.slug} className={'card-taglist'}>
+                        {tags}
+                    </div>
                     {dates}
                 </div>
             </div>)

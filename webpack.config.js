@@ -13,9 +13,9 @@ module.exports = (env, argv) => ({
     },
 
     output: {
-        path: path.resolve('public/build'),
+        path: path.resolve('./frontend_static'),
         filename: '[name].[hash].js',
-        publicPath: "/public/build/",
+        publicPath: "/public/frontend_static/",
     },
 
     resolve: {
