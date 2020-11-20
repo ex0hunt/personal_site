@@ -3,7 +3,7 @@ import {Switch, Route, Link} from 'react-router-dom'
 import {Row, Col} from 'react-bootstrap'
 
 import WhoAmIScreen from "./about.jsx";
-import BlogScreen from "./blog.jsx";
+import BlogScreen from "./blogIndex.jsx";
 import EntsScreen from "./ents.jsx";
 import ServicesScreen from "./services.jsx";
 

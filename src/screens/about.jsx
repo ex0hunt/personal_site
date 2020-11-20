@@ -60,7 +60,7 @@ export default class WhoAmIScreen extends React.Component {
                         <img className="rounded img-fluid" src="https://exo.icu/public/media/avatar.jpeg"/>
                     </Col>
                     <Col md={6}>
-                        <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}-years-old</span>
+                        <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span>-years-old
                             russian software developer at <a href={"https://my.games"} target={"_blank"}>MY.GAMES team (Mail.ru Group)</a>.
                             I enjoy making web stuff  (like this page) and playing video games 🙂</code></p>
 
@@ -106,8 +106,7 @@ export default class WhoAmIScreen extends React.Component {
                             </ul>
                         </p>
                         <p>
-                            🧪 I enjoy doing research and studying new technologies. Now I’m trying to learn <code>Kotlin</code>
-                             to write something for my phone 😏
+                            🧪 I enjoy doing research and studying new technologies. Now I’m trying to learn <code>Kotlin</code> to write something for my phone 😏
                         </p>
                         <p>
                             🎮 I work in game industry and love playing games on my PC and Nintendo Switch, especially Overwatch and Pokemon Sword
