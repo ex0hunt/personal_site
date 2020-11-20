@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import '../styles/App.css'
 import BlogFetcher from "../tools/blogFetcher";
 
 export default class BlogEntity extends React.Component {
@@ -30,6 +29,7 @@ export default class BlogEntity extends React.Component {
         if (this.state.loading) {
             return null
         }
+        const parse = require('html-react-parser');
         let dates = <div className="card-creation_date">{this.formatDateTime(this.state.data.creation_date)}</div>;
             if (this.formatDateTime(this.state.data.edit_date) !== this.formatDateTime(this.state.data.creation_date)) {
                 dates = <React.Fragment>
@@ -42,8 +42,8 @@ export default class BlogEntity extends React.Component {
             }
         return (
             <div className="content-card content-background">
-                <div className="card-title"><Link to={`/`}>{this.state.data.title}</Link></div>
-                <div className="card-preview">{this.state.data.text}</div>
+                <div className="card-title"><Link to={`/blog/`}>{this.state.data.title}</Link></div>
+                <div className="card-preview">{parse(this.state.data.text)}</div>
                 <div className="card-footer">
                     {dates}
                 </div>

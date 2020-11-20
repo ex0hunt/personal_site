@@ -6,6 +6,7 @@ import WhoAmIScreen from "./about.jsx";
 import BlogScreen from "./blogIndex.jsx";
 import EntsScreen from "./ents.jsx";
 import ServicesScreen from "./services.jsx";
+import BlogEntity from "./blogEntity";
 
 
 export default class IndexScreen extends React.Component {
@@ -77,6 +78,7 @@ export default class IndexScreen extends React.Component {
                         <section className="b-content">
                             <Switch>
                                 <Route path={"/whoami/"} component={WhoAmIScreen}/>
+                                <Route path={"/blog/post/:slug/"} component={BlogEntity} />
                                 <Route path={"/blog/"} component={BlogScreen}/>
                                 <Route path={"/ents/"} component={EntsScreen}/>
                                 <Route path={"/services/"} component={ServicesScreen}/>

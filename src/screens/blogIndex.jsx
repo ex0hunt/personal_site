@@ -30,6 +30,7 @@ export default class BlogScreen extends React.Component {
 
     entityCards() {
         let cards = [];
+        const parse = require('html-react-parser');
         for (let i = 0; i < this.state.data.results.length; i++) {
             const item = this.state.data.results[i];
             let dates = <div className="card-creation_date">{this.formatDateTime(item.creation_date)}</div>;
@@ -46,8 +47,8 @@ export default class BlogScreen extends React.Component {
             }
             cards.push(<div key={item.slug} className="content-card content-background">
                 <div key={'card_title__' + item.slug} className="card-title"><Link
-                    to={`/post/${item.slug}/`}>{item.title}</Link></div>
-                <div key={'card_prev__' + item.slug} className="card-preview">{item.preview}</div>
+                    to={`/blog/post/${item.slug}/`}>{item.title}</Link></div>
+                <div key={'card_prev__' + item.slug} className="card-preview">{parse(item.preview)}</div>
                 <div key={'card_footer__' + item.slug} className="card-footer">
                     {dates}
                 </div>
