@@ -60,7 +60,7 @@ export default class BlogScreen extends React.Component {
             for (let i = 0; i < item.tags.length; i++) {
                 tags.push(
                     <div key={`entity_tag__${item.slug}_${i}`}>
-                        <Link to={`/blog/?tag=${item.tags[i]}`}>{item.tags[i]}</Link>
+                        <Link to={`/blog/?tags=${item.tags[i]}`}>{item.tags[i]}</Link>
                     </div>
                 )
             }
