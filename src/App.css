@@ -130,3 +130,7 @@
   display: inline;
   margin-right: 5px;
 }
+
+.code code {
+  color: white;
+}
