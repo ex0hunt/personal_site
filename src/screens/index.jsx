@@ -5,7 +5,7 @@ import {Row, Col} from 'react-bootstrap'
 import WhoAmIScreen from "./about.jsx";
 import BlogScreen from "./blogIndex.jsx";
 import EntsScreen from "./ents.jsx";
-import ServicesScreen from "./services.jsx";
+// import ServicesScreen from "./services.jsx";
 import BlogEntity from "./blogEntity";
 
 
@@ -26,10 +26,10 @@ export default class IndexScreen extends React.Component {
 
     navLinksBar() {
         let linkBar = []
-        let links = ['/whoami/', '/blog/', '/ents/', '/services/']
+        let links = ['/whoami/', '/blog/', '/ents/']
         let linksHead = {
             '/whoami/': 'About Me', '/blog/': 'Blog',
-            '/ents/': 'Entertainments', '/services/': 'Services'
+            '/ents/': 'Entertainments'
         }
 
         links.forEach(function (elem, index, array) {
@@ -81,7 +81,7 @@ export default class IndexScreen extends React.Component {
                                 <Route path={"/blog/post/:slug/"} component={BlogEntity} />
                                 <Route path={"/blog/"} component={BlogScreen}/>
                                 <Route path={"/ents/"} component={EntsScreen}/>
-                                <Route path={"/services/"} component={ServicesScreen}/>
+                                {/*<Route path={"/services/"} component={ServicesScreen}/>*/}
                             </Switch>
                         </section>
                     </Col>
