@@ -3,7 +3,10 @@ import ReactGA from "react-ga";
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import './index.css';
+
 import IndexScreen from './screens/index.jsx'
 
 

@@ -55,7 +55,7 @@ export default class IndexScreen extends React.Component {
             <Fragment>
                 <Row className="show-grid">
                     <Col md={12} className="text-center">
-                        <h1 className="text-center branding">Ex0</h1>
+                        <h1 className="display-4 branding">Ex0</h1>
                     </Col>
                 </Row>
                 <Row className="show-grid" className={'nav-head'}>
