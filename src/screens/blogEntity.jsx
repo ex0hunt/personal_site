@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import {Link} from "react-router-dom";
 import BlogFetcher from "../tools/blogFetcher";
 
@@ -17,6 +18,9 @@ export default class BlogEntity extends React.Component {
     }
 
     componentDidMount() {
+        ReactGA.set({ page: this.props.location.pathname});
+        ReactGA.ga("send", "pageview");
+
         BlogFetcher(`/api/blog/rest/entities/${this.props.match.params.slug}/`, 'GET', this.handleData)
     }
 

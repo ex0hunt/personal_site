@@ -1,8 +1,13 @@
 import React, {Fragment} from "react";
 import {Col, Image, Row} from "react-bootstrap";
+import ReactGA from "react-ga";
 
 
 export default class EntsScreen extends React.Component {
+    componentDidMount() {
+        ReactGA.set({ page: this.props.location.pathname});
+        ReactGA.ga("send", "pageview");
+    }
     render() {
         return (
             <Fragment>

@@ -1,11 +1,12 @@
 import React, {Fragment} from "react";
-import {Row, Col} from 'react-bootstrap'
+import {Row, Col, Image} from 'react-bootstrap'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons/faTwitter'
 import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import ReactGA from "react-ga";
 
 library.add(faTwitter, faGithub, faLinkedin);
 
@@ -25,6 +26,11 @@ export default class WhoAmIScreen extends React.Component {
             yearsCount -= 1;
         }
         return yearsCount
+    }
+
+    componentDidMount() {
+        ReactGA.set({ page: this.props.location.pathname});
+        ReactGA.ga("send", "pageview");
     }
 
     fooBar() {
@@ -57,7 +63,7 @@ export default class WhoAmIScreen extends React.Component {
             <Fragment>
                 <Row>
                     <Col md={{offset: 2, span: 2}}>
-                        <img className="rounded img-fluid" src="https://exo.icu/public/media/avatar.jpeg"/>
+                        <Image src="https://exo.icu/public/media/avatar.jpeg" rounded fluid/>
                     </Col>
                     <Col md={6}>
                         <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span>-years-old

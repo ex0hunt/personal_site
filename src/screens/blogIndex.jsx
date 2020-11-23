@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import BlogFetcher from "../tools/blogFetcher";
+import ReactGA from "react-ga";
 
 export default class BlogScreen extends React.Component {
     constructor(props) {
@@ -25,6 +26,9 @@ export default class BlogScreen extends React.Component {
     }
 
     componentDidMount() {
+        ReactGA.set({ page: this.props.location.pathname+this.props.location.search});
+        ReactGA.ga("send", "pageview");
+
         this.fetchData()
     }
 

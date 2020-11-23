@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
-import './App.css';
+import ReactGA from "react-ga";
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
+
+import './App.css';
 import IndexScreen from './screens/index.jsx'
+
+
+ReactGA.initialize('UA-155365290-1');
 
 class App extends Component {
   render() {
