@@ -3,7 +3,7 @@
     src: url(fonts/hacked.ttf) format("truetype");
 }
 
-.b-page{
+.b-page {
     background-color: #000000;
     color: #E5E5E5;
     margin: 0;
@@ -13,7 +13,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-:root{
+
+:root {
     background-color: #000000;
 }
 
@@ -257,6 +258,7 @@ td {
     color: white;
     background: black;
 }
+
 code .line {
     padding-left: 10px;
     padding-right: 10px;

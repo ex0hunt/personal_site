@@ -19,7 +19,6 @@ export default class WhoAmIScreen extends React.Component {
         let yearsCount = 0;
 
         yearsCount = timeNow.getFullYear() - timeBirth.getFullYear();
-        ;
         if (timeNow.getMonth() < timeBirth.getMonth()) {
             yearsCount -= 1;
         } else if (timeNow.getMonth() === timeBirth.getMonth() && timeNow.getDate() < timeBirth.getDate()) {
@@ -29,7 +28,7 @@ export default class WhoAmIScreen extends React.Component {
     }
 
     componentDidMount() {
-        ReactGA.set({ page: this.props.location.pathname});
+        ReactGA.set({page: this.props.location.pathname});
         ReactGA.ga("send", "pageview");
     }
 
@@ -67,8 +66,9 @@ export default class WhoAmIScreen extends React.Component {
                     </Col>
                     <Col md={6}>
                         <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span>-years-old
-                            russian software developer at <a href={"https://my.games"} target={"_blank"}>MY.GAMES team (Mail.ru Group)</a>.
-                            I enjoy making web stuff  (like this page) and playing video games 🙂</code></p>
+                            russian software developer at <a href={"https://my.games"} target={"_blank"}>MY.GAMES team
+                                (Mail.ru Group)</a>.
+                            I enjoy making web stuff (like this page) and playing video games 🙂</code></p>
 
                         <h5>My Skills</h5>
                         <ul id="skill-list">
@@ -83,7 +83,8 @@ export default class WhoAmIScreen extends React.Component {
                         <br/><br/>
                         <h4>More...</h4>
                         <p>
-                            ‍💻 Previously I worked at small start-up teams as <code>QA Engineer -> Python developer</code> and graduated from Taganrog State
+                            ‍💻 Previously I worked at small start-up teams as <code>QA Engineer -> Python
+                            developer</code> and graduated from Taganrog State
                             Radio Technical University.
                         </p>
                         <p>
@@ -112,10 +113,12 @@ export default class WhoAmIScreen extends React.Component {
                             </ul>
                         </p>
                         <p>
-                            🧪 I enjoy doing research and studying new technologies. Now I’m trying to learn <code>Kotlin</code> to write something for my phone 😏
+                            🧪 I enjoy doing research and studying new technologies. Now I’m trying to
+                            learn <code>Kotlin</code> to write something for my phone 😏
                         </p>
                         <p>
-                            🎮 I work in game industry and love playing games on my PC and Nintendo Switch, especially Overwatch and Pokemon Sword
+                            🎮 I work in game industry and love playing games on my PC and Nintendo Switch, especially
+                            Overwatch and Pokemon Sword
                         </p>
                     </Col>
                 </Row>
