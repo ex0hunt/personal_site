@@ -58,8 +58,13 @@ export default class IndexScreen extends React.Component {
                         <h1 className="display-4 branding">Ex0</h1>
                     </Col>
                 </Row>
-                <Row className="show-grid" className={'nav-head'}>
-                    <Col md={12} className="text-center">
+                <Row className={'show-grid nav-head'}>
+                    <input id="menu__toggle" type="checkbox"/>
+                    <label className="menu__btn" htmlFor="menu__toggle">
+                        <span></span>
+                    </label>
+
+                    <Col md={12} className="text-center nav-links">
                         <this.navLinksBar/>
                     </Col>
                 </Row>
