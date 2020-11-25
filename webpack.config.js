@@ -19,7 +19,7 @@ module.exports = (env, argv) => ({
     },
 
     resolve: {
-        extensions: ["*", ".js", ".jsx", ".scss"],
+        extensions: ["*", ".js", ".jsx", ".scss", ".tsx", ".ts"],
 
         modules: [
             "node_modules",
@@ -73,7 +73,12 @@ module.exports = (env, argv) => ({
             {
                 test: /\.(woff|woff2|ttf|eot)$/,
                 use: 'file-loader?name=fonts/[name].[ext]!static'
-            }
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
 

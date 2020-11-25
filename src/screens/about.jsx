@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import {Row, Col, Image} from 'react-bootstrap'
+import {Helmet} from "react-helmet";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
@@ -57,12 +58,52 @@ export default class WhoAmIScreen extends React.Component {
 
     render() {
         const footer = this.fooBar()
+        const schema = {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org", "@type": "Person",
+                name: "Dmitry",
+                alternateName: "Ex0",
+                birthDate: "23.07.1990",
+                email: "inbox@exo.icu",
+                gender: "male",
+                homeLocation: "Russia",
+                jobTitle: "Software Developer",
+                worksFor: "MY.GAMES",
+                knowsAbout: ["Python", "GoLang", "K8S", "Linux"]
+            }),
+        }
 
         return (
             <Fragment>
+                <Helmet script={[schema]}>
+                    <meta charSet="utf-8"/>
+                    <title>Ex0::About Me</title>
+                    <link rel="canonical" href="http://exo.icu/whoami/"/>
+
+                    <meta name="twitter:card" content="summary"/>
+                    <meta name="twitter:title" content="Ex0"/>
+                    <meta
+                        name="twitter:description"
+                        content="Dmitry K :: Software Developer"
+                    />
+                    <meta name="twitter:creator" content="@ex0hunt"/>
+                    <meta
+                        name="twitter:image"
+                        content="http://exo.icu/public/media/logo.png"
+                    />
+
+                    <meta property="og:title" content="EXO"/>
+                    <meta property="og:site_name" content="Some pages"/>
+                    <meta property="og:description" content="Dmitry K, Software Developer"/>
+                    <meta property="og:image" content="http://exo.icu/public/media/logo.png"/>
+                    <meta property="og:url" content="https://exo.icu"/>
+                    <meta property="og:type" content="website"/>
+                </Helmet>
+
                 <Row>
                     <Col md={{offset: 2, span: 2}}>
-                        <Image src="https://exo.icu/public/media/avatar.jpeg" rounded fluid/>
+                        <Image src="https://exo.icu/public/media/avatar.webp" rounded fluid/>
                     </Col>
                     <Col md={6}>
                         <p><code>Hello there👋, my names is Dmitry. I am a <span>{this.yearsCount()}</span>-years-old

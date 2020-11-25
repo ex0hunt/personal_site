@@ -1,7 +1,10 @@
+/* tslint:disable */
+
 import React from "react";
 import {Link} from "react-router-dom";
 import BlogFetcher from "../tools/blogFetcher";
 import ReactGA from "react-ga";
+import {Helmet} from "react-helmet";
 
 export default class BlogScreen extends React.Component {
     constructor(props) {
@@ -114,6 +117,11 @@ export default class BlogScreen extends React.Component {
         }
         return (
             <React.Fragment>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Ex0::Blog</title>
+                    <link rel="canonical" href="http://exo.icu/blog/" />
+                </Helmet>
                 <div>{this.entityCards()}</div>
                 {this.pagesNav()}
             </React.Fragment>
