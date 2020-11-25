@@ -12,7 +12,7 @@ export default function BlogFetcher(uri, request_method, callback) {
         }
     };
 
-    fetch(uri, req_params)
+    fetch("https://exo.icu"+uri, req_params)
         .then(response => {
             if (!response.ok) {
                 throw response.json()

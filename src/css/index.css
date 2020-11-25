@@ -83,28 +83,6 @@ td {
     color: #FCA311;
 }
 
-
-.nav-foo {
-    position: absolute;
-    left: -25px;
-    bottom: -70px;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-foo-item {
-    display: inline-block;
-}
-
-.nav-foo-item .nav-foo-link {
-    padding: 10px 35px 10px 35px;
-    margin-left: 10px;
-    background-color: #E5E5E5;
-    border-radius: 10px;
-    color: #14213D;
-
-}
-
 .services-table {
     width: 350px;
     margin: 0 auto;
@@ -163,12 +141,6 @@ code {
 
     .warning img {
         max-width: 320px;
-    }
-
-    .nav-foo-item {
-        display: block;
-        padding-top: 25px;
-        width: 100%;
     }
 
     .menu__btn {

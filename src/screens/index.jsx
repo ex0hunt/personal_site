@@ -76,22 +76,25 @@ export default class IndexScreen extends React.Component {
     render() {
         const navBar = this.navBar()
         return (
-            <div className="container-fluid">
+            <Fragment>
                 {navBar}
-                <Row>
-                    <Col md={12}>
-                        <section className="b-content">
-                            <Switch>
-                                <Route path={"/whoami/"} component={WhoAmIScreen}/>
-                                <Route path={"/blog/post/:slug/"} component={BlogEntity} />
-                                <Route path={"/blog/"} component={BlogScreen}/>
-                                <Route path={"/ents/"} component={EntsScreen}/>
-                                {/*<Route path={"/services/"} component={ServicesScreen}/>*/}
-                            </Switch>
-                        </section>
-                    </Col>
-                </Row>
-            </div>
+                <div className="container-fluid">
+
+                    <Row>
+                        <Col md={12}>
+                            <section className="b-content">
+                                <Switch>
+                                    <Route path={"/whoami/"} component={WhoAmIScreen}/>
+                                    <Route path={"/blog/post/:slug/"} component={BlogEntity}/>
+                                    <Route path={"/blog/"} component={BlogScreen}/>
+                                    <Route path={"/ents/"} component={EntsScreen}/>
+                                    {/*<Route path={"/services/"} component={ServicesScreen}/>*/}
+                                </Switch>
+                            </section>
+                        </Col>
+                    </Row>
+                </div>
+            </Fragment>
         )
     }
 }

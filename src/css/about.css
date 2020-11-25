@@ -1,19 +1,19 @@
+.social-panel {
+    horiz-align: center;
+}
+
+
+.social-link {
+    display: block;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    color: #14213D;
+    padding-inline: 25px;
+
+}
+
 @media only screen and (max-width: 420px) {
-    .nav-foo {
-        bottom: 0px;
-        left: 15px;
-        position: relative;
-    }
-
-    .nav-foo-link {
-        display: block;
-        width: 150px;
-
-    }
-
-    .nav-foo-item {
-        display: inline;
-        padding-inline: 15px;
-
+    .social-item {
+        padding-top: 10px;
     }
 }
