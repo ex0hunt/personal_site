@@ -1,0 +1,19 @@
+@media only screen and (max-width: 420px) {
+    .nav-foo {
+        bottom: 0px;
+        left: 15px;
+        position: relative;
+    }
+
+    .nav-foo-link {
+        display: block;
+        width: 150px;
+
+    }
+
+    .nav-foo-item {
+        display: inline;
+        padding-inline: 15px;
+
+    }
+}

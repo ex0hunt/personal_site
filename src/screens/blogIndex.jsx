@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import BlogFetcher from "../tools/blogFetcher";
 import ReactGA from "react-ga";
 import {Helmet} from "react-helmet";
+import '../css/blog.css';
 
 export default class BlogScreen extends React.Component {
     constructor(props) {

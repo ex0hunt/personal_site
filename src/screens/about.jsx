@@ -9,6 +9,8 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import ReactGA from "react-ga";
 
+import '../css/about.css';
+
 library.add(faTwitter, faGithub, faLinkedin);
 
 

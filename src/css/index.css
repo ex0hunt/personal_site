@@ -1,6 +1,6 @@
 @font-face {
     font-family: "hacked";
-    src: url(fonts/hacked.ttf) format("truetype");
+    src: url(../fonts/hacked.ttf) format("truetype");
 }
 
 .b-page {
@@ -87,7 +87,7 @@ td {
 .nav-foo {
     position: absolute;
     left: -25px;
-    bottom: -150px;
+    bottom: -70px;
     width: 100%;
     text-align: center;
 }
@@ -124,8 +124,10 @@ code {
 /* hide ham-menu */
 #menu__toggle {
     opacity: 0;
+    visibility: collapse;
 }
 
+/* Mobile */
 @media only screen and (max-width: 420px) {
 
     h1 {
@@ -243,106 +245,3 @@ code {
     }
 }
 
-/*BLOG*/
-.mainContent {
-    text-align: center;
-}
-
-.content-card {
-    z-index: 999;
-    color: white;
-    max-width: 800px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-}
-
-.content-title {
-    vertical-align: middle;
-    text-align: center;
-    font-size: large;
-    color: white;
-    font-family: monospace;
-}
-
-.content-card a {
-    color: #FCA311;
-}
-
-.content-background {
-    background-color: #14213D;
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    opacity: 0.7;
-}
-
-.card-title {
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.card-footer {
-    font-size: 12px;
-    text-align: right;
-    width: 100%;
-    background-color: #14213D;
-}
-
-.card-creation_date {
-    display: inline;
-}
-
-.card-edit_date {
-    display: inline;
-    margin-left: 5px;
-    font-style: italic;
-}
-
-.paginator {
-    max-width: 800px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-family: monospace;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.paginator a {
-    text-decoration: none;
-    color: #FCA311;
-}
-
-.paginator .nextPage {
-    float: right;
-    text-align: right;
-}
-
-.paginator .prevPage {
-    float: left;
-    text-align: left;
-}
-
-.card-taglist div {
-    display: inline;
-    margin-right: 5px;
-}
-
-/*styling code*/
-.card-preview pre {
-    color: white;
-    background: black;
-}
-
-code .line {
-    padding-left: 10px;
-    padding-right: 10px;
-}
