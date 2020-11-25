@@ -2,8 +2,8 @@
 const path = require('path'),
     webpack = require('webpack'),
     {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-    HtmlWebpackPlugin = require("html-webpack-plugin");
-
+    HtmlWebpackPlugin = require("html-webpack-plugin"),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => ({
     devtool: 'source-map',
@@ -29,6 +29,17 @@ module.exports = (env, argv) => ({
         ]
     },
 
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "public/index.html"
+        }),
+        new webpack.DefinePlugin({
+            "process.env.IMAGE_TAG": JSON.stringify(process.env.IMAGE_TAG)
+        })
+    ],
+
     module: {
         rules: [
             {
@@ -43,25 +54,7 @@ module.exports = (env, argv) => ({
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {sourceMap: true}
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                        }
-                    },
-                    {
-                        loader: "sass-loader",
-                        options: {sourceMap: true}
-                    }
-                ]
+                use: [MiniCssExtractPlugin.loader,'css-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|ico|svg)$/,
@@ -82,25 +75,30 @@ module.exports = (env, argv) => ({
         ],
     },
 
-    plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: "public/index.html"
-        }),
-        new webpack.DefinePlugin({
-            "process.env.IMAGE_TAG": JSON.stringify(process.env.IMAGE_TAG)
-        })
-    ],
-
     optimization: {
         moduleIds: 'hashed',
         runtimeChunk: true,
+        removeEmptyChunks: true,
+        removeAvailableModules: true,
         splitChunks: {
+            chunks: 'async',
+            minSize: 20000,
+            minRemainingSize: 0,
+            maxSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            enforceSizeThreshold: 50000,
             cacheGroups: {
-                vendor: {
+                defaultVendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: "vendor",
-                    chunks: "all"
+                    priority: -10,
+                    reuseExistingChunk: true
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
                 }
             }
         }
