@@ -103,6 +103,7 @@ code {
 #menu__toggle {
     opacity: 0;
     visibility: collapse;
+    position: fixed;
 }
 
 /* Mobile */

@@ -12,7 +12,7 @@
 
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 800px) {
     .social-item {
         padding-top: 10px;
     }
