@@ -5,9 +5,10 @@ import ReactGA from "react-ga";
 
 export default class EntsScreen extends React.Component {
     componentDidMount() {
-        ReactGA.set({ page: this.props.location.pathname});
+        ReactGA.set({page: this.props.location.pathname});
         ReactGA.ga("send", "pageview");
     }
+
     render() {
         return (
             <Fragment>

@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import {Row, Col, Image} from 'react-bootstrap'
+import {Col, Image, Row} from 'react-bootstrap'
 import {Helmet} from "react-helmet";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
@@ -42,15 +42,18 @@ export default class WhoAmIScreen extends React.Component {
                     <Row className="show-grid social-panel">
                         <Col md={4} className="text-center social-item">
                             <a href="https://github.com/ex0hunt"
-                               target="_blank" className="social-link"><FontAwesomeIcon icon={["fab", "github"]} /> GitHub</a>
+                               target="_blank" className="social-link"><FontAwesomeIcon
+                                icon={["fab", "github"]}/> GitHub</a>
                         </Col>
                         <Col md={4} className="text-center social-item">
                             <a href="https://www.linkedin.com/in/dmitry-katargin-44a36250"
-                               target="_blank"  className="social-link"><FontAwesomeIcon icon={["fab", "linkedin"]}/> LinkedIn</a>
+                               target="_blank" className="social-link"><FontAwesomeIcon
+                                icon={["fab", "linkedin"]}/> LinkedIn</a>
                         </Col>
                         <Col md={4} className="text-center social-item">
                             <a href="https://twitter.com/ex0hunt"
-                               target="_blank" className="social-link"><FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter</a>
+                               target="_blank" className="social-link"><FontAwesomeIcon
+                                icon={["fab", "twitter"]}/> Twitter</a>
                         </Col>
                     </Row>
                 </Col>

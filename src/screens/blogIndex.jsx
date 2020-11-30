@@ -24,27 +24,27 @@ export default class BlogScreen extends React.Component {
         this.setState({loading: false, data: data})
     }
 
-    fetchData(){
+    fetchData() {
         const qs = this.props.location.search
         BlogFetcher(`/api/blog/rest/entities/${qs}`, 'GET', this.handleData)
     }
 
     componentDidMount() {
-        ReactGA.set({ page: this.props.location.pathname+this.props.location.search});
+        ReactGA.set({page: this.props.location.pathname + this.props.location.search});
         ReactGA.ga("send", "pageview");
 
         this.fetchData()
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps.location.key !== this.props.location.key){
+        if (prevProps.location.key !== this.props.location.key) {
             this.fetchData()
         }
     }
 
     formatDateTime(timeString) {
         let dateObj = new Date(timeString);
-        return `${("0" + dateObj.getDate()).slice(-2)}/${("0" + (dateObj.getMonth() + 1)).slice(-2)}/${dateObj.getFullYear()} ${('0'+dateObj.getHours()).slice(-2)}:${('0'+dateObj.getMinutes()).slice(-2)}`
+        return `${("0" + dateObj.getDate()).slice(-2)}/${("0" + (dateObj.getMonth() + 1)).slice(-2)}/${dateObj.getFullYear()} ${('0' + dateObj.getHours()).slice(-2)}:${('0' + dateObj.getMinutes()).slice(-2)}`
     }
 
     entityCards() {
@@ -78,7 +78,7 @@ export default class BlogScreen extends React.Component {
                     to={`/blog/post/${item.slug}/`}>{item.title}</Link></div>
                 <div key={'card_prev__' + item.slug} className="card-preview">{parse(item.preview)}</div>
                 <div key={'card_footer__' + item.slug} className="card-footer">
-                    <div key={'taglist__'+item.slug} className={'card-taglist'}>
+                    <div key={'taglist__' + item.slug} className={'card-taglist'}>
                         {tags}
                     </div>
                     {dates}
@@ -119,9 +119,9 @@ export default class BlogScreen extends React.Component {
         return (
             <React.Fragment>
                 <Helmet>
-                    <meta charSet="utf-8" />
+                    <meta charSet="utf-8"/>
                     <title>Ex0::Blog</title>
-                    <link rel="canonical" href="http://exo.icu/blog/" />
+                    <link rel="canonical" href="http://exo.icu/blog/"/>
                 </Helmet>
                 <div>{this.entityCards()}</div>
                 {this.pagesNav()}

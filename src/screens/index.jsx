@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
-import {Switch, Route, Link} from 'react-router-dom'
-import {Row, Col} from 'react-bootstrap'
+import {Link, Route, Switch} from 'react-router-dom'
+import {Col, Row} from 'react-bootstrap'
 
 import WhoAmIScreen from "./about.jsx";
 import BlogScreen from "./blogIndex.jsx";

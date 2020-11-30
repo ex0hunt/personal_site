@@ -63,7 +63,8 @@ export default class BlogEntity extends React.Component {
                     name: "Ex0.icu",
                     logo: {
                         "@type": "ImageObject",
-                        url: "http://exo.icu/public/media/logo.png"}
+                        url: "http://exo.icu/public/media/logo.png"
+                    }
                 },
                 name: this.state.data.title,
                 headline: this.state.data.title,
@@ -79,7 +80,7 @@ export default class BlogEntity extends React.Component {
         }
         let tmpDiv = document.createElement("div");
         tmpDiv.innerHTML = this.state.data.text.slice(0, 40);
-        let entityDescr = tmpDiv.textContent +"..." || tmpDiv.innerText + "..." || ""
+        let entityDescr = tmpDiv.textContent + "..." || tmpDiv.innerText + "..." || ""
 
         return (
             <React.Fragment>
@@ -87,10 +88,10 @@ export default class BlogEntity extends React.Component {
                     <meta charSet="utf-8"/>
                     <title>Ex0::Blog::{this.state.data.title}</title>
                     <link rel="canonical" href={canonical_url}/>
-                    <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:title" content={this.state.data.title} />
+                    <meta name="twitter:card" content="summary"/>
+                    <meta name="twitter:title" content={this.state.data.title}/>
                     <meta name="twitter:description" content="Ex0 :: Blog"/>
-                    <meta name="twitter:creator" content="@ex0hunt" />
+                    <meta name="twitter:creator" content="@ex0hunt"/>
                     <meta name="twitter:image" content="http://exo.icu/public/media/logo.png"/>
 
                     <meta property="og:title" content={this.state.data.title}/>
