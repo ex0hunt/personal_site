@@ -15,5 +15,6 @@
 @media only screen and (max-width: 800px) {
     .social-item {
         padding-top: 10px;
+        min-width: 375px;
     }
 }

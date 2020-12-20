@@ -214,7 +214,6 @@ code {
     #menu__toggle:checked ~ .nav-links {
         visibility: visible;
         position: relative;
-
         left: 0;
     }
 }
