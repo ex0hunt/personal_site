@@ -25,13 +25,6 @@ export default class IndexScreen extends React.Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        this.state.menuOpen = false
-        if (prevState.menuOpen === true) {
-            this.setState({menuOpen: false})
-        }
-    }
-
     navLinksBar() {
         let linkBar = []
         let links = ['/whoami/', '/blog/', '/ents/']
@@ -58,8 +51,20 @@ export default class IndexScreen extends React.Component {
         )
     }
 
-    showMenu(event){
-        this.setState({menuOpen: !this.state.menuOpen})
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.location !== prevProps.location) {
+            this.onRouteChanged();
+        }
+    }
+
+    onRouteChanged() {
+        this.setState({menuOpen: false})
+    }
+
+
+    showMenu(event) {
+        let state = !this.state.menuOpen
+        this.setState({menuOpen: state})
     }
 
     navBar() {
