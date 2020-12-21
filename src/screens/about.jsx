@@ -37,27 +37,23 @@ export default class WhoAmIScreen extends React.Component {
 
     fooBar() {
         return (
-            <Row>
-                <Col md={{offset: 4, span: 4}} className="social-panel">
-                    <Row className="show-grid social-panel">
-                        <Col md={4} className="text-center social-item">
-                            <a href="https://github.com/ex0hunt"
-                               target="_blank" className="social-link"><FontAwesomeIcon
-                                icon={["fab", "github"]}/> GitHub</a>
-                        </Col>
-                        <Col md={4} className="text-center social-item">
-                            <a href="https://www.linkedin.com/in/dmitry-katargin-44a36250"
-                               target="_blank" className="social-link"><FontAwesomeIcon
-                                icon={["fab", "linkedin"]}/> LinkedIn</a>
-                        </Col>
-                        <Col md={4} className="text-center social-item">
-                            <a href="https://twitter.com/ex0hunt"
-                               target="_blank" className="social-link"><FontAwesomeIcon
-                                icon={["fab", "twitter"]}/> Twitter</a>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+            <div className="social-panel">
+                <div className="text-center social-item">
+                    <a href="https://github.com/ex0hunt"
+                       target="_blank" className="social-link"><FontAwesomeIcon
+                        icon={["fab", "github"]}/> GitHub</a>
+                </div>
+                <div className="text-center social-item">
+                    <a href="https://www.linkedin.com/in/dmitry-katargin-44a36250"
+                       target="_blank" className="social-link"><FontAwesomeIcon
+                        icon={["fab", "linkedin"]}/> LinkedIn</a>
+                </div>
+                <div className="text-center social-item">
+                    <a href="https://twitter.com/ex0hunt"
+                       target="_blank" className="social-link"><FontAwesomeIcon
+                        icon={["fab", "twitter"]}/> Twitter</a>
+                </div>
+            </div>
         )
     }
 

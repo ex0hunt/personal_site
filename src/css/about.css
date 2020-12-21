@@ -1,7 +1,12 @@
 .social-panel {
-    horiz-align: center;
+    text-align: center;
+
 }
 
+.social-item {
+    display: inline-block;
+    padding-right: 10px;
+}
 
 .social-link {
     display: block;
@@ -12,9 +17,22 @@
 
 }
 
+@media only screen and (max-width: 400px) {
+    .social-item {
+        padding-top: 10px;
+        min-width: 90%;
+    }
+    .social-panel{
+        padding-bottom: 50px;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .social-item {
         padding-top: 10px;
-        min-width: 375px;
+        min-width: 70%;
+    }
+    .social-panel{
+        padding-bottom: 50px;
     }
 }

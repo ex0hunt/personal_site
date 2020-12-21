@@ -52,12 +52,10 @@ export default class IndexScreen extends React.Component {
 
     navBar() {
         return (
-            <Fragment>
-                <Row className="show-grid">
-                    <Col md={12} className="text-center">
-                        <h1 className="display-4 branding">Ex0</h1>
-                    </Col>
-                </Row>
+            <div className={"header"}>
+                <div className="branding">
+                    <h1>Ex0</h1>
+                </div>
                 <Row className={'show-grid nav-head'}>
                     <input id="menu__toggle" type="checkbox"/>
                     <label className="menu__btn" htmlFor="menu__toggle">
@@ -68,7 +66,7 @@ export default class IndexScreen extends React.Component {
                         <this.navLinksBar/>
                     </Col>
                 </Row>
-            </Fragment>
+            </div>
         )
     }
 
@@ -79,20 +77,16 @@ export default class IndexScreen extends React.Component {
             <Fragment>
                 {navBar}
                 <div className="container-fluid">
+                    <section className="b-content">
+                        <Switch>
+                            <Route path={"/whoami/"} component={WhoAmIScreen}/>
+                            <Route path={"/blog/post/:slug/"} component={BlogEntity}/>
+                            <Route path={"/blog/"} component={BlogScreen}/>
+                            <Route path={"/ents/"} component={EntsScreen}/>
+                            {/*<Route path={"/services/"} component={ServicesScreen}/>*/}
+                        </Switch>
+                    </section>
 
-                    <Row>
-                        <Col md={12}>
-                            <section className="b-content">
-                                <Switch>
-                                    <Route path={"/whoami/"} component={WhoAmIScreen}/>
-                                    <Route path={"/blog/post/:slug/"} component={BlogEntity}/>
-                                    <Route path={"/blog/"} component={BlogScreen}/>
-                                    <Route path={"/ents/"} component={EntsScreen}/>
-                                    {/*<Route path={"/services/"} component={ServicesScreen}/>*/}
-                                </Switch>
-                            </section>
-                        </Col>
-                    </Row>
                 </div>
             </Fragment>
         )

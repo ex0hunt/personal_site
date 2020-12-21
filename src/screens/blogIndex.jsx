@@ -123,7 +123,7 @@ export default class BlogScreen extends React.Component {
                     <title>Ex0::Blog</title>
                     <link rel="canonical" href="http://exo.icu/blog/"/>
                 </Helmet>
-                <div>{this.entityCards()}</div>
+                <div className={"card-list"}>{this.entityCards()}</div>
                 {this.pagesNav()}
             </React.Fragment>
         )
