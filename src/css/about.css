@@ -22,9 +22,6 @@
         padding-top: 10px;
         min-width: 90%;
     }
-    .social-panel{
-        padding-bottom: 50px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
