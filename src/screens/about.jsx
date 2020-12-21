@@ -95,8 +95,8 @@ export default class WhoAmIScreen extends React.Component {
                     />
 
                     <meta property="og:title" content="EXO"/>
-                    <meta property="og:site_name" content="Some pages"/>
-                    <meta property="og:description" content="Dmitry K, Software Developer"/>
+                    <meta property="og:site_name" content="Ex0 :: About"/>
+                    <meta property="og:description" content="Dmitry K. Software Developer at MY.GAMES"/>
                     <meta property="og:image" content="http://exo.icu/public/media/logo.png"/>
                     <meta property="og:url" content="https://exo.icu"/>
                     <meta property="og:type" content="website"/>
