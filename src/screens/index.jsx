@@ -12,8 +12,9 @@ import BlogEntity from "./blogEntity";
 export default class IndexScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {menuOpen: false};
         this.props = props;
+        this.showMenu = this.showMenu.bind(this)
         this.navLinksBar = this.navLinksBar.bind(this);
     }
 
@@ -21,6 +22,13 @@ export default class IndexScreen extends React.Component {
         // load default page
         if (!this.props.location.pathname || this.props.location.pathname === '/') {
             this.props.history.push("/whoami/");
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.state.menuOpen = false
+        if (prevState.menuOpen === true) {
+            this.setState({menuOpen: false})
         }
     }
 
@@ -50,6 +58,10 @@ export default class IndexScreen extends React.Component {
         )
     }
 
+    showMenu(event){
+        this.setState({menuOpen: !this.state.menuOpen})
+    }
+
     navBar() {
         return (
             <div className={"header"}>
@@ -57,7 +69,7 @@ export default class IndexScreen extends React.Component {
                     <h1>Ex0</h1>
                 </div>
                 <Row className={'show-grid nav-head'}>
-                    <input id="menu__toggle" type="checkbox"/>
+                    <input id="menu__toggle" type="checkbox" checked={this.state.menuOpen} onClick={this.showMenu}/>
                     <label className="menu__btn" htmlFor="menu__toggle">
                         <span></span>
                     </label>

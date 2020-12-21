@@ -257,5 +257,11 @@ code {
         border-radius: 5px;
         opacity: 0.95;
     }
+
+    #menu__toggle:not(:checked) ~ .nav-links {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+    }
 }
 
