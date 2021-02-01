@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/>
+        <link rel="apple-touch-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="index.css">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Ex0">
+        <meta name="twitter:description" content="Dmitry K :: Software Developer">
+        <meta name="twitter:creator" content="@ex0hunt">
+        <meta name="twitter:image" content="http://exo.icu/public/media/avatar.jpeg">
+
+        <meta property="og:title" content="EXO">
+        <meta property="og:site_name" content="Ex0">
+        <meta property="og:description" content="Dmitry K, Software Developer">
+        <meta property="og:image" content="http://exo.icu/public/media/logo.png">
+        <meta property="og:url" content="https://exo.icu">
+        <meta property="og:type" content="website">
+        <title>Dmitry K :: Ex0 :: Software Developer</title>
+    </head>
+    <body>
+        <div class="header">
+            Hello there👋
+        </div>
+        <div class="container-fluid">
+            <div class="left-panel">
+                <div class="row">
+                    <img src="https://exo.icu/public/media/avatar.webp" class="img-fluid rounded">
+                </div>
+                <div class="row">
+                    <div class="social-item">
+                        <a href="https://github.com/ex0hunt" target="_blank" class="social-link">GitHub</a>
+                    </div>
+                     <div class="social-item">
+                        <a href="https://www.linkedin.com/in/dmitry-katargin-44a36250" target="_blank" class="social-link">LinkedIn</a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://exohunt.medium.com/" target="_blank" class="social-link">Medium blog</a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://twitter.com/ex0hunt" target="_blank" class="social-link">Twitter</a>
+                    </div>
+                    <hr/>
+                    <div class="social-item">
+                        <span>email: inbox@exo.icu</span>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="row">
+                    <div class="intro">
+                        My names is Dmitry. I am a <span id="currentYears">30</span>-years-old russian software developer at MY.GAMES team (Mail.ru Group). I enjoy making web stuff (like this page) and playing video games 🙂
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>My Skills</h3>
+                    <ul>
+                        <li>Analytical skills</li>
+                        <li>Backend development (django, drf, golang)</li>
+                        <li>Front-end development (react, vue)</li>
+                        <li>DevOps (docker, kubernetes+helm)</li>
+                        <li>Design process</li>
+                        <li>Linux-based system administrator</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <h3>More...</h3>
+                    <p>💻 Previously I worked at small start-up teams as QA Engineer -> Python developer and graduated from Taganrog State Radio Technical University.</p>
+
+                    <p>🎧 I listen technical podcasts for improving my professional skills. Some of them:</p>
+                        <ul>
+                            <li> <a href="https://beardycast.com/" target="_blank">BeardyCast</a> - IT, media, gadgets. And The Big Beard Theory - scientific talks (all about Space and Universe!) </li>
+                            <li> <a href="https://dtf.ru/everypod" target="_blank">EveryPod</a> - tech and video games talks </li>
+                            <li> <a href="https://radio-t.com/" target="_blank">Radio-T</a> - IT, development </li>
+                            <li> <a href="https://zavtracast.ru/" target="_blank">ZavtraCast</a> - media, some news </li>
+                        </ul>
+
+                    <p>🧪 I enjoy doing research and studying new technologies. Now I’m trying to learn Kotlin to write something for my phone 😏</p>
+
+                    <p>🎮 I work in game industry and love playing games on my PC and Nintendo Switch, especially Overwatch and Pokemon Sword</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        // init variables
+        var timeNow = new Date();
+        var timeBirth = new Date(Date.parse("1990-07-23"));
+        var yearsCount = 0;
+        // count years since date of birth
+        yearsCount = timeNow.getFullYear() - timeBirth.getFullYear();
+        if (timeNow.getMonth() < timeBirth.getMonth()) {
+            yearsCount -= 1;
+        } else if (timeNow.getMonth() === timeBirth.getMonth() && timeNow.getDate() < timeBirth.getDate()) {
+            yearsCount -= 1;
+        }
+        // set text for span
+        element = document.getElementById("currentYears");
+        element.innerText=yearsCount;
+    </script>
+</html>
